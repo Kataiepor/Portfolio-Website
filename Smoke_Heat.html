@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Images/TabIcon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke & Heat Detector</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/855b38aa8b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+        <div class="container">
+            <div class="header-text-projects">
+                <p>Project</p>
+                <h1><span>Smoke & Heat Detector</span><br></h1>
+            </div>
+        </div>
+
+    <!-----------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Project3.jpg">
+                </div>
+
+                <div class="about-col-2">
+                    
+                    <h1 class="sub-title">About The Project</h1>
+                    <p>I developed a Heat and Smoke Detector to enhance fire detection systems. This critical safety device detects heat and smoke, providing early warnings to mitigate fire risks.<br><br>
+                        Utilizing 3D printing, I crafted a custom components for the detector, ensuring precision and efficiency in its design. Our proficient wiring skills seamlessly integrated electronic components for reliable detector operation.<br><br>
+                        The project highlights my ability to blend modern technology with traditional safety measures. This project represents a vital tool in safeguarding lives and property from fire hazards.</p>
+    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Creator')">Creator</p>
+                    </div>
+                    <!---Links--->
+                    <div class="tab-contents active-tab" id="Creator">
+                        <ul>
+
+                            <li>
+                                <div class="name">
+                                    <p> Daniel Khataiepour</p>
+                                </div>
+                                <div class="git-icon">
+                                    <p><a href="https://github.com/Kataiepor" target="_blank"><i class="fa-brands fa-github"></i></a>&nbsp;Kataiepor</p>
+                                </div>
+                                <p><i class="fa-solid fa-graduation-cap"></i> University of Waterloo</p>
+                                <p><i class="fa-solid fa-light fa-paper-plane"></i>&nbsp;&nbsp;dkhataie@uwaterloo.ca</p>
+                            </li>
+                            
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+    </div> 
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>

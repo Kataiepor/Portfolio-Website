@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Images/TabIcon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Cell Battery Boat</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/855b38aa8b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+        <div class="container">
+            <div class="header-text-projects">
+                <p>Project</p>
+                <h1><span>Fuel Cell Battery Boat</span><br></h1>
+            </div>
+        </div>
+
+    <!-----------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Project2.jpg">
+                </div>
+
+                <div class="about-col-2">
+                    
+                    <h1 class="sub-title">About The Project</h1>
+                    <p>During the summer, a friend and I created an innovative project to develop a Fuel Cell Battery Boat. This project aimed to revolutionize traditional boat propulsion methods by harnessing the power of hydrogen fuel cells.<br><br>
+                        Our boat features an advanced propulsion system driven by hydrogen fuel cells, converting hydrogen gas into electricity with minimal emissions. This eco-friendly design offers enhanced efficiency and extended range compared to traditional combustion engines.<br><br>
+                        The Fuel Cell Battery Boat represents a sustainable solution for marine transportation, offering clean and environmentally friendly propulsion. Its performance capabilities make it ideal for eco-conscious individuals and organizations seeking greener water transportation options.<br><br>
+                        Overall, our project highlights the potential of fuel cell technology to transform the boating industry, paving the way for a cleaner and more sustainable future on the water.</p>
+    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Technical Details')">Technical Details</p>
+                        <p class="tab-links" onclick="opentab('Collaborators')">Collaborators</p>
+                    </div>
+                    <!---Links--->
+                    <div class="tab-contents active-tab" id="Technical Details">
+                        <ul>
+                            <!--
+                            <div class="git-icon">
+                                <li><span>GitHub Link:  </span><a href="https://github.com/Kataiepor/Breathalyzer-Code/blob/main/ECE_198.ino" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                            </div>
+                            -->
+                            <div class="git-icon">
+                                <li><span>Final Report:  </span><a href="Images/FUEL_CELL_Final_Report.pdf" target="_blank"><i class="fa-solid fa-file"></i></a></li>
+                            </div>
+                            <div class="pdfdesign"></div>
+                            Detailed document about our projects design
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Collaborators">
+                            <ul>
+                                <li>
+                                    <div class="name">
+                                        <p> Daniel Khataiepour</p>
+                                    </div>
+                                    <div class="git-icon">
+                                        <p><a href="https://github.com/Kataiepor" target="_blank"><i class="fa-brands fa-github"></i></a>&nbsp;Kataiepor</p>
+                                    </div>
+                                    <p><i class="fa-solid fa-graduation-cap"></i> University of Waterloo</p>
+                                    <p><i class="fa-solid fa-light fa-paper-plane"></i>&nbsp;&nbsp;dkhataie@uwaterloo.ca</p>
+                                </li>
+                                <li>
+                                    <div class="name">
+                                        <p> George Chen</p>
+                                    </div>
+                                    <div class="git-icon">
+                                        <p><a href="https://github.com/GeorgesCoding" target="_blank"><i class="fa-brands fa-github"></i></a>&nbsp;GeorgesCoding</p>
+                                    </div>
+                                    <p><i class="fa-solid fa-graduation-cap"></i> University of Waterloo</p>
+                                    <p><i class="fa-solid fa-light fa-paper-plane"></i>&nbsp;&nbsp;george.chen@uwaterloo.ca</p>
+                                </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+    </div> 
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>

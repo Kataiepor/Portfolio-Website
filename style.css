@@ -19,7 +19,8 @@ html{
     background: #000; 
     width: 100%;
     height: 100vh; 
-    background-image: url(Images/Picture2.jpg) !important;
+    /*background-image: url(Images/Picture2.jpg) !important;*/
+    background-image: url(Images/Header.jpg) !important;
     background-size: cover;
     background-position: center;
 }
@@ -77,6 +78,20 @@ nav ul li a:hover::after{
     color: #86cfe2;
 }
 
+.header-text-projects{
+    margin-top: 10%; 
+    font-size: 30px;
+}
+
+.header-text-projects h1{
+    font-size: 60px;
+    margin-top: 10px; 
+}
+
+.header-text-projects h1 span{
+    color: #86cfe2;
+}
+
 /*-----------about-----------*/
 
 #about{
@@ -107,6 +122,17 @@ nav ul li a:hover::after{
     font-size: 40px; 
     font-weight: 600;
     color: #86cfe2; 
+}
+
+.sub-title-projects{
+    position: absolute;
+    top: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 50px; 
+    font-weight: bold;
+    color: #86cfe2;
 }
 
 .tab-titles{
@@ -147,6 +173,18 @@ nav ul li a:hover::after{
     font-size: 20px
 }
 
+.tab-contents .tab{
+    margin-Left: 5px;
+}
+
+.tab-contents ul li date{
+    float: right;
+}
+
+.tab-contents{
+    display: none;
+}
+
 .tab-contents{
     display: none;
 }
@@ -161,8 +199,6 @@ nav ul li a:hover::after{
     padding: 50px 0;
 }
 
-
-
 .work-list{
     display: flex;
     padding: 20px;
@@ -172,15 +208,6 @@ nav ul li a:hover::after{
     margin-top: 50px;
 }
 
-
-/*
-.work-list {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-*/
-
 .work{
     border-radius: 10px;
     position: relative;
@@ -188,7 +215,7 @@ nav ul li a:hover::after{
 }
 
 .work img{
-    width: 110%;
+    width: 100%;
     margin-right: 10px; /* Adjust the spacing between images */
     border-radius: 10px;
     display: block; 
@@ -254,6 +281,40 @@ nav ul li a:hover::after{
 
 .btn hover{
     background: #86cfe2;
+}
+
+/*---------Breathalyzer---------*/
+
+.pdfdesign {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.pdfdesign .pdflink{
+    color: #86cfe2;
+}
+
+.name{
+    color: #86cfe2;
+    font-size: 20px;
+}
+li .fa-solid{
+    font-size: 20px;
+    color: #fff;
+}
+li .fa-brands{
+    font-size: 20px;
+    color: #86cfe2;
+}
+li .fa-paper-plane{
+    font-size: 20px;
+    color: #fff;
+} 
+.git-icon .fa-brands{
+    transition: transform 0.5s;
+}
+.git-icon .fa-brands:hover{
+    transform: scale(1.1);
 }
 
 /*---------Contact---------*/
