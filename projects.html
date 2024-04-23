@@ -7,24 +7,81 @@
     <title>Daniel's Projects</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/855b38aa8b.js" crossorigin="anonymous"></script>
+    <style>
+
+        .container {
+            text-align: center;
+        }
+
+        .sub-title-projects{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            font-size: 50px; 
+            font-weight: bold;
+            color: #86cfe2;
+            margin-top: 20px;
+            /* Add typewriter animation */
+            width: 22ch;
+            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0px solid; /* Reduce the width of the border */
+            font-family: 'Poppins', sans-serif;
+        }
+        
+.sub-title-projects::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px; /* Adjust this value to bring the cursor closer */
+    animation: blink 1s step-end infinite alternate;
+    font-family: monospace;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+    
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+</style>
 </head>
 
     <body>
+        <div id="title">
+            <div class="return">
+                <a href='/'><i class="fa-solid fa-house"></i></a>
+            </div>
+        </div>
+
         <div id="project">
             <div class="container">
-                <h1 class="sub-title-projects">My Projects</h1>
+                <h1 class="sub-title-projects">
+                    My Projects
+                </h1>
                 <div class="work-list">
+                    <nav>
+                    <ul id="sidemenu">
+                    </nav>
+                </div>
                     <!-- First row of tabs -->
+                    <div class="work-list">
                     <div class="work">
-                        <img src="Images/Project1.jpg">
+                        <img src="Images/BREATH.jpg">
                         <div class="layer">
                             <h3>BREATHALYZER</h3>
                             <p>Portable STM32 Breathalyzer for precise blood alcohol detector.</p>
                             <a href="Breathalyzer.html"><i class="fas fa-external-link-alt"></i></a>
-                        </div>          
+                        </div>      
                     </div>
                     <div class="work">
-                        <img src="Images/Project2.jpg">
+                        <img src="Images/BOAT.jpg">
                         <div class="layer">
                             <h3>FUEL CELL BATTERY BOAT</h3>
                             <p>Designed and built a fuel cell battery-powered boat.</p>
@@ -32,7 +89,7 @@
                         </div>
                     </div>
                     <div class="work">
-                        <img src="Images/Project3.jpg">
+                        <img src="Images/Fire.png">
                         <div class="layer">
                             <h3>HEAT & SMOKE DETECTOR</h3>
                             <p>Created a small-scale heat and smoke detector.</p>
@@ -43,7 +100,7 @@
                 <!-- Second row of tabs -->
                 <div class="work-list">
                     <div class="work">
-                        <img src="Images/Project4.jpg">
+                        <img src="Images/DOLLAR.png">
                         <div class="layer">
                             <h3>DOLLAR DYNAMO</h3>
                             <p>Robo-advisor service tailored to ETF investments, automating financial planning, asset allocation, and tax reporting.<br>Developed in C++</p>
@@ -51,7 +108,7 @@
                         </div>          
                     </div>
                     <div class="work">
-                        <img src="Images/Project5.jpg">
+                        <img src="Images/Geese.png">
                         <div class="layer">
                             <h3>GEESE SWEEPER</h3>
                             <p>Text-based 2D single-player game. <br>Clone of the iconic game Minesweeper. <br>Developed in C++</p>
@@ -67,13 +124,40 @@
                         </div>
                     </div> 
                 </div>
+                
+                <!-- Third row of tabs -->
+                <div class="work-list">
+                    <div class="work">
+                        <video src="Videos/WEATHER.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>WEATHER APP</h3>
+                            <p>Developed a weather application in Python that retrieves and stores API Key Data, offering users up-to-date weather conditions.</p>
+                            <a href="https://github.com/Kataiepor/Weather-App"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <video src="Videos/Pomodoro.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>POMODORO APP</h3>
+                            <p>Created a Pomodoro Workflow app for personal self-studying, customizable in dark and light modes for enhanced productivity. <br>Developed in Python</p>
+                            <a href="https://github.com/Kataiepor/Pomodoro-App"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <video src="Videos/SUDOKU.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>SUDOKU SOLVER</h3>
+                            <p>Created a program that utilizes a recursive backtracking algorithm to proficiently solve any Sudoku puzzle provided. <br>Developed in C++</p>
+                            <a href="https://github.com/Kataiepor/Sudoku-Solver"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="copyright">
             <p>Copyright @ Daniel Khataiepour</p>
         </div>
-        
 
     </body>
 
