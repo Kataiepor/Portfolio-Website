@@ -1,3 +1,5 @@
+
+
 *{
     margin :0;
     padding : 0; 
@@ -102,6 +104,35 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 .return .fa-solid:hover{
+    color: #86cfe2;
+    transform: scale(1.1);
+}
+
+/* .return_2{
+    font-size: 30px;
+    float: right;
+    padding: 40px 70px;
+} */
+
+/* .return{
+    font-size: 30px;
+    float: right;
+    padding: 40px 70px;
+} */
+
+.return_2 {
+    font-size: 30px;
+    float: right;
+    padding: 40px 20px; /* Adjust padding as needed */
+    color: #fff;
+    transition: transform 0.5s;
+}
+
+.return_2 .fa-solid{
+    color: #fff;
+    transition: transform 0.5s;
+}
+.return_2 .fa-solid:hover{
     color: #86cfe2;
     transform: scale(1.1);
 }
@@ -411,6 +442,25 @@ nav .fas{
 }
 
 @media only screen and (max-width: 600px) {
+    .return {
+        display: block; /* Show the house symbol on smaller screens */
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .return_2 {
+        display: block; /* Show the house symbol on smaller screens */
+        position: absolute;
+        top: 20px; /* Adjust as needed */
+        right: 20px; /* Position it further from the right side of the viewport */
+    }
+}
+
+@media only screen and (max-width: 600px) {
     .sub-title-projects {
         text-align: center; /* Center the text horizontally */
         position: absolute; /* Position the element absolutely */
@@ -438,7 +488,6 @@ nav .fas{
         margin-right: 0;
     }
 }
-
 
 @media screen and (max-width: 768px) {
     .header-text-projects{
