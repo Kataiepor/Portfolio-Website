@@ -39,7 +39,7 @@
             animation: typing 2s steps(22), blink .5s step-end infinite alternate;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 0px solid; /* Reduce the width of the border */
+            border-right: 0px solid; 
             font-family: "Afacad Flux", serif;
         }
         
@@ -47,7 +47,7 @@
     content: '';
     position: absolute;
     top: 0;
-    right: -10px; /* Adjust this value to bring the cursor closer */
+    right: -10px; 
     animation: blink 1s step-end infinite alternate;
     font-family: monospace;
 }
@@ -64,9 +64,30 @@
     }
 }
 </style>
+
+<style>
+    header {
+        background: url(Images/Header.jpg) no-repeat center center fixed;
+        position: relative;
+        width: 100%;
+        height: 100vh; 
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
 </head>
 
     <body>
+
         <div id="title">
             <div class="return">
                 <a href='/'><i class="fa-solid fa-house"></i></a>
@@ -84,7 +105,34 @@
                     </nav>
                 </div>
 
-                    <!-- First row of tabs -->
+                <!-- First row of tabs -->
+                <div class="work-list">
+                    <div class="work">
+                        <img src="Images/CS Cover 2.jpg">
+                        <div class="layer">
+                            <h3>COMING SOON</h3>
+                                <p>This Project will soon be published after it is completed. In the meantime, you can view my other projects!</p>
+                        </div>      
+                    </div>
+                    <div class="work">
+                        <video src="Videos/ASCII.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>ASCII ART GENERATOR</h3>
+                                <p>Created an ASCII art generator that converts any image into ASCII representation using the Python Imaging Library (PIL) to process pixels and map brightness to characters.</p><br>Developed in Python</p>
+                                <a href="https://github.com/Kataiepor/ASCII-ART"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <video src="Videos/HT.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>HAND TRACKER COMPUTER VISION</h3>
+                            <p>Developed a hand-tracking program using advanced computer vision techniques to accurately detect and track hand movements in real-time, enabling gesture recognition and interactive applications.</p><br>Developed in Python</p>
+                            <a href="https://github.com/Kataiepor/Hand-Tracker-Advanced-Computer-Vision"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Second row of tabs -->
                     <div class="work-list">
                         <div class="work">
                             <img src="Images/BCCPCB.png">
@@ -95,51 +143,54 @@
                             </div>      
                         </div>
                         <div class="work">
+                            <img src="Images/5VREG.png">
+                            <div class="layer">
+                                <h3>VOLTAGE REGULATOR PCB</h3>
+                                <p>Designed and implemented a fully functional voltage regulator circuit in KiCad, optimizing stability, efficiency, and performance to ensure reliable power delivery for advanced electronic applications.</p>
+                                <a href="5VREG.html"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="work">
                             <img src="Images/TFLPCB.png">
                             <div class="layer">
                                 <h3>TRAFFIC LIGHT PCB</h3>
                                 <p>
-                                    Designed a fully functional Arduino-compatible traffic light circuit in KiCad, integrating key schematic and PCB design elements to ensure seamless functionality and precision in embedded electronics.</p>
+                                    Designed a functional Arduino-compatible traffic light circuit in KiCad, integrating key schematic and PCB design elements to ensure seamless functionality and precision in embedded electronics.</p>
                                 <a href="TFL.html"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
-                        <div class="work">
-                            <img src="Images/NA.jpg">
-                            <div class="layer">
-                                <h3>COMING SOON</h3>
-                                <p>This Project will soon be published after it is completed. In the meantime, you can view my other projects!</p>
-                            </div>
-                        </div>
+                        
                         </div>
 
-                    <!-- Second row of tabs -->
-                    <div class="work-list">
-                    <div class="work">
-                        <img src="Images/BREATH.jpg">
-                        <div class="layer">
-                            <h3>BREATHALYZER</h3>
-                            <p>Portable STM32 Breathalyzer for precise blood alcohol detector.</p>
-                            <a href="Breathalyzer.html"><i class="fas fa-external-link-alt"></i></a>
-                        </div>      
-                    </div>
-                    <div class="work">
-                        <img src="Images/BOAT.jpg">
-                        <div class="layer">
-                            <h3>FUEL CELL BATTERY BOAT</h3>
-                            <p>Designed and built a fuel cell battery-powered boat.</p>
-                            <a href="Boat.html"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="Images/Fire.png">
-                        <div class="layer">
-                            <h3>HEAT & SMOKE DETECTOR</h3>
-                            <p>Created a small-scale heat and smoke detector.</p>
-                            <a href="Smoke_Heat.html"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    </div>
                 <!-- Third row of tabs -->
+                <div class="work-list">
+                    <div class="work">
+                        <video src="Videos/WEATHER.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>WEATHER APP</h3>
+                            <p>Developed a weather application in Python that retrieves and stores API Key Data, offering users up-to-date weather conditions.</p>
+                            <a href="https://github.com/Kataiepor/Weather-App"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <video src="Videos/Pomodoro.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>POMODORO APP</h3>
+                            <p>Created a Pomodoro Workflow app for personal self-studying, customizable in dark and light modes for enhanced productivity. <br>Developed in Python</p>
+                            <a href="https://github.com/Kataiepor/Pomodoro-App"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <video src="Videos/SUDOKU.mp4" autoplay muted loop playsinline></video>
+                        <div class="layer">
+                            <h3>SUDOKU SOLVER</h3>
+                            <p>Created a program that utilizes a recursive backtracking algorithm to proficiently solve any Sudoku puzzle provided. <br>Developed in C++</p>
+                            <a href="https://github.com/Kataiepor/Sudoku-Solver"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fourth row of tabs -->
                 <div class="work-list">
                     <div class="work">
                         <img src="Images/DOLLAR.png">
@@ -167,33 +218,34 @@
                     </div> 
                 </div>
                 
-                <!-- Fourth row of tabs -->
+                <!-- Fifth row of tabs -->
                 <div class="work-list">
                     <div class="work">
-                        <video src="Videos/WEATHER.mp4" autoplay muted loop playsinline></video>
+                        <img src="Images/BREATH.jpg">
                         <div class="layer">
-                            <h3>WEATHER APP</h3>
-                            <p>Developed a weather application in Python that retrieves and stores API Key Data, offering users up-to-date weather conditions.</p>
-                            <a href="https://github.com/Kataiepor/Weather-App"><i class="fas fa-external-link-alt"></i></a>
+                            <h3>BREATHALYZER</h3>
+                            <p>Portable STM32 Breathalyzer for precise blood alcohol detector.</p>
+                            <a href="Breathalyzer.html"><i class="fas fa-external-link-alt"></i></a>
+                        </div>      
+                    </div>
+                    <div class="work">
+                        <img src="Images/BOAT.jpg">
+                        <div class="layer">
+                            <h3>FUEL CELL BATTERY BOAT</h3>
+                            <p>Designed and built a fuel cell battery-powered boat.</p>
+                            <a href="Boat.html"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="work">
-                        <video src="Videos/Pomodoro.mp4" autoplay muted loop playsinline></video>
+                        <img src="Images/Fire.png">
                         <div class="layer">
-                            <h3>POMODORO APP</h3>
-                            <p>Created a Pomodoro Workflow app for personal self-studying, customizable in dark and light modes for enhanced productivity. <br>Developed in Python</p>
-                            <a href="https://github.com/Kataiepor/Pomodoro-App"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <video src="Videos/SUDOKU.mp4" autoplay muted loop playsinline></video>
-                        <div class="layer">
-                            <h3>SUDOKU SOLVER</h3>
-                            <p>Created a program that utilizes a recursive backtracking algorithm to proficiently solve any Sudoku puzzle provided. <br>Developed in C++</p>
-                            <a href="https://github.com/Kataiepor/Sudoku-Solver"><i class="fas fa-external-link-alt"></i></a>
+                            <h3>HEAT & SMOKE DETECTOR</h3>
+                            <p>Created a small-scale heat and smoke detector.</p>
+                            <a href="Smoke_Heat.html"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
