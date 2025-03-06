@@ -21,25 +21,26 @@
     <script src="https://kit.fontawesome.com/855b38aa8b.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 6.5.2="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==" crossorigin="anonymous" /> -->
 </head>
+
 <body>
+
     <div id="header">
         <div class="container">
             <nav>
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#project">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fas fa-times" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fas fa-bars" onclick="openmenu()"></i>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
+
             <div class="header-text">
-                <!-- <p>Future Electrical Engineer</p> -->
                 <h1>Hello, I'm <span>Daniel Khataiepour</span></h1>
                 <h3>and I'm a <span class="multiple-text"></span></h3>
             </div> 
-
         </div>
     </div>
 
@@ -65,13 +66,133 @@
                             <p class="tab-links" onclick="opentab('education')">Education</p>
                         </div>
                         <!---Skills--->
+
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
-                                <li><span>Languages</span><br>C/C++, Python, Java, JavaScript, HTML, CSS, MATLAB</li>
-                                <li><span>Technical Skills</span><br> Altium Designer, AutoCad, SolidWorks, Arduino IDE, Git Commands</li>
-                                <li><span>Design Skills</span><br>Circuit Design, PCB Design, Soldering, Troubleshooting, 3-D Printing, Wiring</li>
+                                <h3>Languages</h3>
+                                <div class="language-section">
+                                    <div class="language-icons">
+                                        <div class="icon-container">
+                                            <img src="Images/CPP.png" alt="C++" class="icon-img">
+                                            <p>C++</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/Csharp.png" alt="C#" class="icon-img">
+                                            <p>C#</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/C.png" alt="C" class="icon-img">
+                                            <p>C</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <i class="fa-brands fa-python icon-fa" style="color: #3776AB;"></i>
+                                            <p>Python</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <i class="fa-brands fa-js icon-fa" style="color: #F7DF1E;"></i>
+                                            <p>JavaScript</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <i class="fa-brands fa-html5 icon-fa" style="color: #E34F26;"></i>
+                                            <p>HTML</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <i class="fa-brands fa-css3-alt icon-fa" style="color: #1572B6;"></i>
+                                            <p>CSS</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/Matlab.png" alt="MATLAB" class="icon-img">
+                                            <p>MATLAB</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3>Technical Skills</h3>
+
+                                <!-- First Row Of Technical Skills -->
+                                <div class="language-section">
+                                    <div class="language-icons">
+                                        <div class="icon-container">
+                                            <img src="Images/Altium.png" alt="Altium Designer" class="icon-img">
+                                            <p>Altium</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/KiCad.png" alt="KiCad" class="icon-img">
+                                            <p>KiCad</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/LTSpice.png" alt="LTSpice" class="icon-img">
+                                            <p>LTSpice</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/STM32.png" alt="STM32 IDE" class="icon-img">
+                                            <p>STM32 IDE</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/OnShape.png" alt="OnShape" class="icon-img">
+                                            <p>OnShape</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/AutoCad.png" alt="AutoCad" class="icon-img">
+                                            <p>AutoCad</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/SolidWorks.png" alt="SolidWorks" class="icon-img">
+                                            <p>SolidWorks</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/Arduino.png" alt="Arduino IDE" class="icon-img">
+                                            <p>Arduino IDE</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Second Row Of Technical Skills -->
+                                <div class="language-section">
+                                    <div class="language-icons">
+                                        <div class="icon-container">
+                                            <img src="Images/NumPy.png" alt="NumPy" class="icon-img">
+                                            <p>NumPy</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/Git.png" alt="Git" class="icon-img">
+                                            <p>Git</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/RasPi.png" alt="Raspberry Pi" class="icon-img">
+                                            <p>Raspberry Pi</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/OpenCV.png" alt="Python OpenCV" class="icon-img">
+                                            <p>OpenCV</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/ESP32.png" alt="ESP32" class="icon-img">
+                                            <p>ESP32</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/BetaFlight.png" alt="BetaFlight" class="icon-img">
+                                            <p>BetaFlight</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/ReactJS.png" alt="ReactJS" class="icon-img">
+                                            <p>ReactJS</p>
+                                        </div>
+                                        <div class="icon-container">
+                                            <img src="Images/Figma.png" alt="Figma" class="icon-img">
+                                            <p>Figma</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
+                        <!-- <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Languages</span><br>C/C++, Python, Java, JavaScript, HTML, CSS, MATLAB</li>
+                                <li><span>Technical Skills</span><br> Altium Designer, KiCad, LTSpice, STM32 IDE, OnShape, AutoCad, SolidWorks, Arduino IDE, Git Commands</li>
+                                <li><span>Design Skills</span><br>Circuit Design, PCB Design, Soldering, Troubleshooting, 3-D Printing, Wiring</li>
+                            </ul>
+                        </div> -->
                         <!---Experience--->
                         <div class="tab-contents" id="experience">
                             <ul>
@@ -109,19 +230,19 @@
                             </div>    
                 </div>
                 <div class="work">
-                    <img src="Images/TFLPCB.png">
-                            <div class="layer">
-                                <h3>TRAFFIC LIGHT PCB</h3>
-                                <p>
-                                    Designed a fully functional Arduino-compatible traffic light circuit in KiCad, integrating key schematic and PCB design elements to ensure seamless functionality and precision in embedded electronics.</p>
-                                <a href="TFL.html"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                    <video src="Videos/ASCII.mp4" autoplay muted loop playsinline></video>
+                    <div class="layer">
+                        <h3>ASCII ART GENERATOR</h3>
+                            <p>Created an ASCII art generator that converts any image into ASCII representation using the Python Imaging Library (PIL) to process pixels and map brightness to characters.</p><br>Developed in Python</p>
+                            <a href="https://github.com/Kataiepor/ASCII-ART"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
                 <div class="work">
-                    <img src="Images/NA.jpg">
+                    <video src="Videos/HT.mp4" autoplay muted loop playsinline></video>
                     <div class="layer">
-                        <h3>COMING SOON</h3>
-                        <p>This Project will soon be published after it is completed. In the meantime, you can view my other projects!</p>
+                        <h3>HAND TRACKER COMPUTER VISION</h3>
+                        <p>Developed a hand-tracking program using advanced computer vision techniques to accurately detect and track hand movements in real-time, enabling gesture recognition and interactive applications.</p><br>Developed in Python</p>
+                        <a href="https://github.com/Kataiepor/Hand-Tracker-Advanced-Computer-Vision"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
