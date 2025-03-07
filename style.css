@@ -604,6 +604,32 @@ nav .fas{
     }
 } 
 */
+
+/* Dark Mode Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust width if needed */
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Dark background */
+}
+
+::-webkit-scrollbar-thumb {
+    /* background: #444; Darker scroll thumb */
+    background: #666;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666; /* Slightly lighter on hover */
+}
+
+/* For Firefox */
+html {
+    
+    scrollbar-color: #646363 #1a1919;
+}
+
 @media only screen and (max-width: 480px) {
     /* html, body {
         height: auto;
