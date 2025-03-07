@@ -629,12 +629,6 @@ nav .fas{
     scrollbar-color: #646363 #1a1919 !important;
 } */
 
-/* For Firefox */
-html {
-    
-    scrollbar-color: #646363 #1a1919;
-}
-
 @media only screen and (max-width: 480px) {
     /* html, body {
         height: auto;
