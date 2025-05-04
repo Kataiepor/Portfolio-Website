@@ -21,7 +21,7 @@ body {
     height: 100vh;
     height: -webkit-fill-available;
     background: url(Images/Knight.gif) no-repeat center center fixed;
-    background-image: linear-gradient(black);
+/*     background-image: linear-gradient(black); */
     background-size: cover;
     color: #fff;  
 }
