@@ -225,50 +225,7 @@
             </a>
         </div>
 
-        <!-- KiCanvas Interactive Schematic & PCB Viewer Section -->
-        <section id="kicanvas-section">
-            <div class="kicanvas-header">
-                <h2 class="section-title">Interactive Schematic & PCB View</h2>
-                <p class="section-subtitle">Explore the design in detail with our interactive viewer</p>
-            </div>
-
-            <!-- View Buttons -->
-            <div class="btn-container-2">
-                <button class="btn-1" id="viewSchematicBtn">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    View Schematic
-                </button>
-                <button class="btn-1" id="viewPCBBtn">
-                    <i class="fa-solid fa-microchip"></i>
-                    View PCB Layout
-                </button>
-            </div>
-
-            <!-- Schematic Modal -->
-            <div class="schematicModal modal" id="schematicModal">
-                <div class="modal-content">
-                    <button class="closeModalBtn close-btn">&times;</button>
-                    <div class="kicanvas-modal-wrapper">
-                        <kicanvas-embed controls="full" theme="kicad" controlslist="nodownload">
-                            <kicanvas-source src="https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2FKataiepor%2FFlight-Controller-PCB"></kicanvas-source>
-                        </kicanvas-embed>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PCB Modal -->
-            <div class="schematicModal modal" id="pcbModal">
-                <div class="modal-content">
-                    <button class="closeModalBtn close-btn">&times;</button>
-                    <div class="kicanvas-modal-wrapper">
-                        <kicanvas-embed controls="full" theme="kicad" controlslist="nodownload">
-                            <kicanvas-source src="https://raw.githubusercontent.com/Kataiepor/Flight-Controller-PCB/main/Flight%20Controller%20Version%201/Flight%20Controller.kicad_pcb"></kicanvas-source>
-                        </kicanvas-embed>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        
 
     <script>
         // Image Slider Functionality
@@ -342,10 +299,11 @@
 
             // Open Schematic Modal
             if (viewSchematicBtn) {
-                viewSchematicBtn.addEventListener('click', function() {
-                window.open('https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2FKataiepor%2FFlight-Controller-PCB', '_blank');
-});
-            }
+  viewSchematicBtn.addEventListener('click', function() {
+    schematicModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  });
+}
 
             // Open PCB Modal
             if (viewPCBBtn) {
