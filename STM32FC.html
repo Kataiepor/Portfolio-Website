@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4F5PP2ZDNC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4F5PP2ZDNC');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STM32 Flight Controller</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/855b38aa8b.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script type="module" src="https://kicanvas.org/kicanvas/kicanvas.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+    
+</head>
+<body>
+    <div id="title">
+        <div class="return_2">
+            <a href='/'><i class="fa-solid fa-house"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-section">
+            <h1 class="titlepcb">STM32 FLIGHT CONTROLLER</h1>
+        </div>
+
+        <!-- Hero Section with Image Slider -->
+        <section id="hero-section">
+            <div class="hero-container">
+                <!-- Left Side: Image Slider -->
+                <div class="hero-left">
+                    <div class="image-slider">
+                        <button class="slider-btn prev-btn" onclick="changeSlide(-1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="slider-content">
+                            <img src="Images/STM32FC Front.png" alt="Flight Controller PCB - Front View" class="slider-image active">
+                            <img src="Images/STM32FC Back.png" alt="Flight Controller PCB -  Back View" class="slider-image">
+                            <video src="Videos/FC 360 PCB.mp4" autoplay muted loop playsinline alt="Flight Controller PCB - 360 View" class="slider-image">
+                        </div>
+                        
+                        <button class="slider-btn next-btn" onclick="changeSlide(1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        
+                        <!-- Slider Indicators -->
+                        <div class="slider-indicators">
+                            <span class="indicator active" onclick="goToSlide(0)"></span>
+                            <span class="indicator" onclick="goToSlide(1)"></span>
+                            <span class="indicator" onclick="goToSlide(2)"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons Below Image -->
+                    <div class="hero-actions">
+                        <button class="action-btn primary-btn" onclick="scrollToSection('kicanvas-section')">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            View Schematic
+                        </button>
+                        <button class="action-btn secondary-btn" onclick="window.open('https://raw.githubusercontent.com/Kataiepor/Flight-Controller-PCB/main/Technical-Report/FlightController-Report.pdf')">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            Technical Report
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Info Boxes -->
+                <div class="hero-right">
+                    <div class="info-box header-box">
+                        <h2>About The Project</h2>
+                    </div>
+                    
+                    <div class="info-box description-box">
+                        <div class="description-content">
+                            <p>I wanted to build a custom flight controller from the ground up to deepen my understanding of PCB design, embedded systems, and sensor integration for UAV 
+                                applications. My goal was to create a professional grade board that goes beyond tutorials, demonstrating real engineering practices and industry relevant design skills.</p>
+                            <br>
+                            <p>The board is based on the STM32F446RE microcontroller (ARM Cortex-M4), chosen for its high performance in real-time applications. It integrates the ICM 42670P IMU for motion sensing and the 
+                                BMP390 barometric sensor for altitude measurement. To support UAV control, the design includes ESC connectors, UART, SPI, CAN bus interfaces, and SWD debugging. The result is a complete 
+                                embedded platform capable of powering and controlling drones or other robotics projects.</p>
+                            <br>
+                            <p>Designed and routed the multi-layer PCB in KiCad with emphasis on signal integrity, power distribution, and decoupling. Optimized oscillator and sensor routing for stability. Validated hardware
+                                 in STM32CubeIDE through firmware configuration and peripheral testing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Original 3D Model Section (Optional - can be removed) -->
+        <div class="pcb-container" style="display: none;">
+            <div class="pcbmodel">
+                <!-- Modern 3D Model Viewer for STEP files -->
+                <model-viewer 
+                    id="pcb-model"
+                    src="https://raw.githubusercontent.com/Kataiepor/Flight-Controller-PCB/main/3D/FlightController.step"
+                    alt="STM32 Flight Controller PCB 3D Model"
+                    auto-rotate
+                    camera-controls
+                    touch-action="pan-y"
+                    style="width: 100%; height: 100%; background-color: #1a1a1a; border-radius: 15px;"
+                    loading="eager"
+                    reveal="auto"
+                    environment-image="neutral"
+                    shadow-intensity="1"
+                    exposure="1">
+                    
+                    <!-- Loading indicator -->
+                    <div slot="poster" class="model-loading">
+                        <div class="loading-content">
+                            <div class="spinner"></div>
+                            <h3>Loading 3D Model...</h3>
+                            <p>Loading your Flight Controller PCB</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Error fallback -->
+                    <div slot="error" class="model-error">
+                        <i class="fa-solid fa-exclamation-triangle" style="font-size: 3rem; color: #ff6b6b; margin-bottom: 15px;"></i>
+                        <h3>Model Viewer Issue</h3>
+                        <p>The STEP file might need conversion to GLB/GLTF format</p>
+                        <div style="margin-top: 20px;">
+                            <a href="https://raw.githubusercontent.com/Kataiepor/Flight-Controller-PCB/main/3D/FlightController.step" 
+                               target="_blank" 
+                               class="fallback-btn" 
+                               style="margin-right: 10px;">
+                                <i class="fa-solid fa-download"></i>
+                                Download STEP
+                            </a>
+                            <a href="https://3dviewer.net" target="_blank" class="fallback-btn">
+                                <i class="fa-solid fa-cube"></i>
+                                External Viewer
+                            </a>
+                        </div>
+                    </div>
+                </model-viewer>
+                
+                <!-- Backup: If model-viewer fails, show alternative options -->
+                <div id="backup-viewer" style="display: none;" class="viewer-placeholder">
+                    <div class="viewer-content">
+                        <i class="fa-solid fa-cube" style="font-size: 4rem; color: #86cfe2; margin-bottom: 20px;"></i>
+                        <h3>3D PCB Model</h3>
+                        <p>Multiple viewing options for your Flight Controller</p>
+                        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+                            <a href="https://3dviewer.net" target="_blank" class="view-3d-btn">
+                                <i class="fa-solid fa-external-link-alt"></i>
+                                Online 3D Viewer
+                            </a>
+                            <a href="https://raw.githubusercontent.com/Kataiepor/Flight-Controller-PCB/main/3D/FlightController.step" 
+                               class="view-3d-btn" 
+                               download>
+                                <i class="fa-solid fa-download"></i>
+                                Download STEP
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3><i class="fa-solid fa-microchip"></i>STM32 MCU</h3>
+                <p>High-performance 32-bit ARM Cortex-M processor with dedicated floating point unit for real time flight calculations and sensor fusion.</p>
+            </div>
+            <div class="feature-card">
+                <h3><i class="fa-solid fa-compass"></i>IMU Integration</h3>
+                <p>6-axis inertial measurement unit with accelerometer and gyroscope for precise attitude determination and flight stabilization.</p>
+            </div>
+            <div class="feature-card">
+                <h3><i class="fa-solid fa-bolt"></i>Power Management</h3>
+                <p>Multi-rail power distribution with voltage regulation, battery monitoring, and power-on sequencing for reliable operation.</p>
+            </div>
+            <div class="feature-card">
+                <h3><i class="fa-solid fa-wifi"></i>Communication</h3>
+                <p>Multiple communication interfaces including USB, UART, SPI, and I2C for telemetry, configuration, and peripheral expansion.</p>
+            </div>
+        </div>
+
+        <div class="specs-section">
+            <h2>Technical Specifications</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <strong>Microcontroller:</strong>
+                    STM32F4 Series 32-bit ARM Cortex-M4
+                </div>
+                <div class="spec-item">
+                    <strong>IMU:</strong>
+                    6 Axis Accelerometer + Gyroscope
+                </div>
+                <div class="spec-item">
+                    <strong>Power Supply:</strong>
+                    5V-24V input with multiple regulated outputs
+                </div>
+                <div class="spec-item">
+                    <strong>Interfaces:</strong>
+                    USB, UART, SPI, I2C, PWM outputs
+                </div>
+                <div class="spec-item">
+                    <strong>PCB:</strong>
+                    4-layer design, 50mm x 50mm form factor
+                </div>
+                <div class="spec-item">
+                    <strong>Operating Temp:</strong>
+                    -40°C to +85°C industrial grade
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-container-2">
+            <a class="btn-1" href="https://github.com/Kataiepor/Flight-Controller-PCB" target="_blank">
+                <i class="fa-brands fa-github"></i>View on GitHub
+            </a>
+        </div>
+
+        <!-- KiCanvas Interactive Schematic & PCB Viewer Section -->
+        <section id="kicanvas-section">
+            <div class="kicanvas-header">
+                <h2 class="section-title">Interactive Schematic & PCB View</h2>
+                <p class="section-subtitle">Explore the design in detail with our interactive viewer</p>
+            </div>
+
+            <!-- View Buttons -->
+            <div class="btn-container-2">
+                <button class="btn-1" id="viewSchematicBtn">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    View Schematic
+                </button>
+                <button class="btn-1" id="viewPCBBtn">
+                    <i class="fa-solid fa-microchip"></i>
+                    View PCB Layout
+                </button>
+            </div>
+
+            <!-- Schematic Modal -->
+            <div class="schematicModal modal" id="schematicModal">
+                <div class="modal-content">
+                    <button class="closeModalBtn close-btn">&times;</button>
+                    <div class="kicanvas-modal-wrapper">
+                        <kicanvas-embed controls="full" theme="kicad" controlslist="nodownload">
+                            <kicanvas-source src="https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2FKataiepor%2FFlight-Controller-PCB"></kicanvas-source>
+                        </kicanvas-embed>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PCB Modal -->
+            <div class="schematicModal modal" id="pcbModal">
+                <div class="modal-content">
+                    <button class="closeModalBtn close-btn">&times;</button>
+                    <div class="kicanvas-modal-wrapper">
+                        <kicanvas-embed controls="full" theme="kicad" controlslist="nodownload">
+                            <kicanvas-source src="https://raw.githubusercontent.com/Kataiepor/Flight-Controller-PCB/main/Flight%20Controller%20Version%201/Flight%20Controller.kicad_pcb"></kicanvas-source>
+                        </kicanvas-embed>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Image Slider Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slider-image');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            
+            // Loop around
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slider every 5 seconds
+        let autoSlideInterval = setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        // Pause auto-advance on hover
+        const imageSlider = document.querySelector('.image-slider');
+        if (imageSlider) {
+            imageSlider.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+
+            imageSlider.addEventListener('mouseleave', () => {
+                autoSlideInterval = setInterval(() => {
+                    changeSlide(1);
+                }, 5000);
+            });
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Modal Functionality for KiCanvas
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get modal elements
+            const schematicModal = document.getElementById('schematicModal');
+            const pcbModal = document.getElementById('pcbModal');
+            const viewSchematicBtn = document.getElementById('viewSchematicBtn');
+            const viewPCBBtn = document.getElementById('viewPCBBtn');
+            const closeButtons = document.querySelectorAll('.closeModalBtn');
+
+            // Open Schematic Modal
+            if (viewSchematicBtn) {
+                viewSchematicBtn.addEventListener('click', function() {
+                window.open('https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2FKataiepor%2FFlight-Controller-PCB', '_blank');
+});
+            }
+
+            // Open PCB Modal
+            if (viewPCBBtn) {
+                viewPCBBtn.addEventListener('click', function() {
+                    pcbModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+
+            // Close modals when clicking X button
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    modal.classList.remove('show');
+                    document.body.style.overflow = 'auto'; // Re-enable scrolling
+                });
+            });
+
+            // Close modal when clicking outside of modal content
+            window.addEventListener('click', function(event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    const openModal = document.querySelector('.modal.show');
+                    if (openModal) {
+                        openModal.classList.remove('show');
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            });
+
+            // Enhanced 3D model handling
+            const modelViewer = document.getElementById('pcb-model');
+            
+            if (modelViewer) {
+                modelViewer.addEventListener('load', function() {
+                    console.log('3D model loaded successfully!');
+                });
+                
+                modelViewer.addEventListener('error', function(event) {
+                    console.log('Model viewer error:', event);
+                    setTimeout(() => {
+                        console.log('Model viewer encountered an error - fallback options available in error slot');
+                    }, 3000);
+                });
+                
+                setTimeout(() => {
+                    if (!modelViewer.loaded && modelViewer.modelIsVisible === false) {
+                        console.log('Model taking longer than expected to load...');
+                    }
+                }, 10000);
+            }
+        });
+
+        // Add smooth scrolling and interactive effects
+        document.querySelectorAll('.btn-1').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add parallax effect to feature cards
+            
+
+        // Handle fallback viewers for STEP file
+        function openExternalViewer() {
+            window.open('https://3dviewer.net', '_blank');
+        }
+        
+        function downloadStepFile() {
+            const link = document.createElement('a');
+            link.href = 'https://raw.githubusercontent.com/Kataiepor/Flight-Controller-PCB/main/3D/FlightController.step';
+            link.download = 'FlightController.step';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
